@@ -1,0 +1,7 @@
+{
+  "name": "intensea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
