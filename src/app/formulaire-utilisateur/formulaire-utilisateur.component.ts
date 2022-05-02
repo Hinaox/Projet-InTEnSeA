@@ -6,12 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire-utilisateur.component.scss'],
 })
 export class FormulaireUtilisateurComponent implements OnInit {
-  lieu = 0;
-  genre = 0 ;
+  lieu = "Ecole";
+  genre = "Homme" ;
   id = "";
   dateNaissance = "--/--/--";
   constructor() { }
 
   ngOnInit() {}
-
+  putLieu(lieu: string){
+    this.lieu = lieu;
+    console.log(this.lieu);
+  }
+  putGenre(genre: string) {
+    this.genre = genre;
+    console.log(this.genre);
+  }
 }

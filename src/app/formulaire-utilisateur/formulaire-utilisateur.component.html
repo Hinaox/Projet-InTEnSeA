@@ -1,28 +1,36 @@
-<div class="container">
+<div class="content">
   <div style="display: flex; flex-direction:column;">
     <div class="col-12 col-md-6 col-lg-4" style="margin:auto;">
       <form>
         <div class="form-group">
-          <button class="btn btn-primary">Hopital</button>
-          <button class="btn btn-primary">Ecole</button>
+          <label class="form-control-label">
+            Lieu:
+          </label>
+          <br>
+          <button class="btn btn-outline-light" (click)="putLieu('Hopital')">Hopital</button>
+          <button class="btn btn-outline-light" (click)="putLieu('Ecole')">Ecole</button>
           <input type="hidden" [ngModel]="lieu">
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Homme</button>
-          <button class="btn btn-primary">Femme</button>
+          <label class="form-control-label">
+            Genre:
+          </label>
+          <br>
+          <button class="btn btn-outline-light" (click)="putGenre('Homme')">Homme</button>
+          <button class="btn btn-outline-light" (click)="putGenre('Femme')">Femme</button>
           <input type="hidden" [ngModel]="genre">
         </div>
         <div class="form-group">
           <label class="form-control-label">
             Id:
           </label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [ngModel]="id">
         </div>
         <div class="form-group">
           <label class="form-control-label">
             Date de naissance:
           </label>
-          <input type="date" class="form-control">
+          <input type="date" class="form-control" [ngModel]="dateNaissance">
         </div>
       </form>
     </div>
