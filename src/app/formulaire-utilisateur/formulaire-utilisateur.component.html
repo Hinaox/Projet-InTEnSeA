@@ -1,0 +1,30 @@
+<div class="container">
+  <div style="display: flex; flex-direction:column;">
+    <div class="col-12 col-md-6 col-lg-4" style="margin:auto;">
+      <form>
+        <div class="form-group">
+          <button class="btn btn-primary">Hopital</button>
+          <button class="btn btn-primary">Ecole</button>
+          <input type="hidden" [ngModel]="lieu">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary">Homme</button>
+          <button class="btn btn-primary">Femme</button>
+          <input type="hidden" [ngModel]="genre">
+        </div>
+        <div class="form-group">
+          <label class="form-control-label">
+            Id:
+          </label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="form-control-label">
+            Date de naissance:
+          </label>
+          <input type="date" class="form-control">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

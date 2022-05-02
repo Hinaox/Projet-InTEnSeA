@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { FormulaireUtilisateurComponent } from './formulaire-utilisateur/formulaire-utilisateur.component';
 
 import  { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { PageChargementComponent } from './page-chargement/page-chargement.component';
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   {path: 'sous-menu-attention', component: SousMenuAttentionComponent},
   {path: 'sous-menu-sensoriel', component: SousMenuSensorielComponent},
   {path: 'page-chargement', component: PageChargementComponent},
+  { path: 'formulaire-utilisateur', component: FormulaireUtilisateurComponent},
   {
     path: '',
     redirectTo: 'main-menu',
