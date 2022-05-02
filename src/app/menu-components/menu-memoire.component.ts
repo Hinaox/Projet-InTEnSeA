@@ -16,6 +16,9 @@ export class MenuMemoireComponent implements  OnInit{
     {display: 'Test mémoire 4', routerLink: 'test-4'}
   ];
 
+  title = 'Mémoire';
+  hasBackButton = true;
+
   constructor() { }
 
   ngOnInit(): void {

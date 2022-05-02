@@ -14,6 +14,9 @@ export class MenuSensorielComponent implements  OnInit{
     {display: 'Audio-visuel', routerLink: 'audio-visuel'}
   ];
 
+  title = 'Sensoriel';
+  hasBackButton = true;
+
   constructor() { }
 
   ngOnInit(): void {

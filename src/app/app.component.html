@@ -2,14 +2,23 @@
   <ion-header [translucent]="true">
     <ion-toolbar>
       <div class="toolbar">
-        <img
-          width="40"
-          alt="Angular Logo"
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-        />
-        <ion-title class="title">
-          InTEnSeA
-        </ion-title>
+        <div *ngIf="hasBackButton" class="button-container">
+          <ion-button fill="clear" routerLink="./">
+            <ion-icon name="arrow-back-outline" size="large"></ion-icon>
+          </ion-button>
+        </div>
+        <div *ngIf="!hasBackButton" class="logo-container">
+          <img
+            width="40"
+            alt="Angular Logo"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+          />
+        </div>
+        <div class="title-container">
+          <ion-title class="title">
+            {{ title }}
+          </ion-title>
+        </div>
       </div>
     </ion-toolbar>
   </ion-header>
@@ -22,6 +31,11 @@
     </ion-header>
 
     <!-- OK pour les routages avec Electron -->
-    <ion-router-outlet></ion-router-outlet>
+
+    <ion-router-outlet (activate)="logTitle($event)"></ion-router-outlet>
+
+    <!--
+    <app-home (titleReady)="logTitle('ddd')"></app-home>
+    -->
   </ion-content>
 </ion-app>

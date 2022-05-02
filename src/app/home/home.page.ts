@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterContentInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,8 @@ export class HomePage {
     {display: 'Sensoriel', routerLink: '/sensoriel'},
     {display: 'Questionnaire', routerLink: '/questionnaire'}
   ];
+
+  title = 'InTEnSeA';
 
   constructor() {}
 

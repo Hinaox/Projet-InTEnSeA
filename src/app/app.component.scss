@@ -1,10 +1,21 @@
 $toolbarMargin: 0.8em;
 .toolbar{
-  img{
-    float: left;
-    margin: $toolbarMargin;
+  padding: $toolbarMargin;
+  .button-container, .logo-container, .title-container{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
   }
-  .title{
-    padding: $toolbarMargin;
+  .button-container, .logo-container{
+    width: 5rem;
+    text-align: center;
+  }
+  .icon-container{
+    display: inline-block;
+    font-size: 4em;
+  }
+
+  .title-container{
+    line-height: 3rem;
   }
 }

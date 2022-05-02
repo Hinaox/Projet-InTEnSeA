@@ -16,6 +16,9 @@ export class MenuAttentionComponent implements  OnInit{
     {display: 'Test attention 4', routerLink: 'test-4'}
   ];
 
+  title = 'Attention';
+  hasBackButton = true;
+
   constructor() { }
 
   ngOnInit(): void {
