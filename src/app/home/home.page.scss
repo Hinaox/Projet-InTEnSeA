@@ -25,3 +25,24 @@
 #container a {
   text-decoration: none;
 }
+
+.menu-item{
+  padding-left: 10em;
+  padding-right: 10em;
+  .card-icon{
+    display: inline-block;
+    width: auto;
+    float: left;
+  }
+}
+
+$toolbarMargin: 0.8em;
+.toolbar{
+  img{
+    float: left;
+    margin: $toolbarMargin;
+  }
+  .title{
+    padding: $toolbarMargin;
+  }
+}
