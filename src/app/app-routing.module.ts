@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {MenuComponent} from "./menu/menu.component";
 import {HomePage} from "./home/home.page";
+import {MenuMemoireComponent} from "./menu-components/menu-memoire.component";
+import {MenuAttentionComponent} from "./menu-components/menu-attention.component";
+import {MenuSensorielComponent} from "./menu-components/menu-sensoriel.component";
 
 const routes: Routes = [
   {
@@ -15,15 +18,15 @@ const routes: Routes = [
   },
   {
     path: 'memoire',
-    component: MenuComponent
+    component: MenuMemoireComponent
   },
   {
     path: 'attention',
-    component: MenuComponent
+    component: MenuAttentionComponent
   },
   {
     path: 'sensoriel',
-    component: MenuComponent
+    component: MenuSensorielComponent
   },
   {
     path: 'questionnaire',

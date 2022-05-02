@@ -1,0 +1,10 @@
+$toolbarMargin: 0.8em;
+.toolbar{
+  img{
+    float: left;
+    margin: $toolbarMargin;
+  }
+  .title{
+    padding: $toolbarMargin;
+  }
+}
