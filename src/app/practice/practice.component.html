@@ -1,0 +1,6 @@
+<div style="display: flex; flex-wrap: wrap">
+    <app-tuile
+      *ngFor="let filename of filenames"
+      [path]="'../../assets/images/Practice/' + filename"
+    ></app-tuile>
+</div>

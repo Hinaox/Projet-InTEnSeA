@@ -12,10 +12,12 @@ import {MenuItemComponent} from './menu-item/menu-item.component';
 import {MenuMemoireComponent} from './menu-components/menu-memoire.component';
 import {MenuAttentionComponent} from './menu-components/menu-attention.component';
 import {MenuSensorielComponent} from './menu-components/menu-sensoriel.component';
+import { TuileComponent } from './tuile/tuile.component';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [AppComponent, HomePage, MenuItemComponent,
-    MenuMemoireComponent, MenuAttentionComponent, MenuSensorielComponent],
+    MenuMemoireComponent, MenuAttentionComponent, MenuSensorielComponent, TuileComponent, PracticeComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
